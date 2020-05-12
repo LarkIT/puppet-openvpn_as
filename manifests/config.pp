@@ -22,15 +22,21 @@ class openvpn_as::config(
 
   # Prepapre the database paths (MySQL or SQLite):
   if $openvpn_as::use_mysql {
-    $openvpn_certs_db     = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_certs"
-    $openvpn_user_prop_db = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_userprop"
-    $openvpn_config_db    = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_config"
-    $openvpn_log_db       = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_log"
+    $openvpn_certs_db        = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_certs"
+    $openvpn_user_prop_db    = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_userprop"
+    $openvpn_config_db       = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_config"
+    $openvpn_config_local_db = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_config_local"
+    $openvpn_cluster_db      = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_cluster"
+    $openvpn_notification_db = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_notification"
+    $openvpn_log_db          = "mysql://${mysql_username}:${mysql_password}@${mysql_host}/as_log"
   } else {
-    $openvpn_certs_db     = 'sqlite:///~/db/certs.db'
-    $openvpn_user_prop_db = 'sqlite:///~/db/userprop.db'
-    $openvpn_config_db    = 'sqlite:///~/db/config.db'
-    $openvpn_log_db       = 'sqlite:///~/db/log.db'
+    $openvpn_certs_db        = 'sqlite:///~/db/certs.db'
+    $openvpn_user_prop_db    = 'sqlite:///~/db/userprop.db'
+    $openvpn_config_db       = 'sqlite:///~/db/config.db'
+    $openvpn_config_local_db = 'sqlite:///~/db/config_local.db'
+    $openvpn_cluster_db      = 'sqlite:///~/db/cluster.db'
+    $openvpn_notification_db = 'sqlite:///~/db/notification.db'
+    $openvpn_log_db          = 'sqlite:///~/db/log.db'
   }
 
   # This is used to "loop" over $admin_users:

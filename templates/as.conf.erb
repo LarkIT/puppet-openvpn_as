@@ -31,13 +31,13 @@ user_prop_db=<%= @openvpn_user_prop_db %>
 config_db=<%= @openvpn_config_db %>
 
 # configuration DB Local
-config_db_local=sqlite:///~/db/config_local.db
+config_db_local=<%= @openvpn_config_local_db %>
 
 # cluster DB
-cluster_db=sqlite:///~/db/cluster.db
+cluster_db=<%= @openvpn_cluster_db %>
 
 # notification DB
-notification_db=sqlite:///~/db/notification.db
+notification_db=<%= @openvpn_notification_db %>
 
 # log DB
 log_db=<%= @openvpn_log_db %>
@@ -88,7 +88,7 @@ general.sock_dir=~/sock
 sa.win_exe_dir=~/exe
 
 # The company name will be shown in the UI
-sa.company_name=OpenVPN Technologies, Inc.
+# sa.company_name=OpenVPN Technologies, Inc.
 
 # server agent socket
 sa.sock=~/sock/sagent

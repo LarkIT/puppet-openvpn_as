@@ -5,5 +5,8 @@ MYSQL_HOST='<%= @mysql_host %>'
 
 echo "/usr/local/openvpn_as/scripts/dbcvt -t certs -s sqlite:////usr/local/openvpn_as/etc/db/certs.db -d 'mysql://${MYSQL_USER}:${MYSQL_PASS}@${MYSQL_HOST}/as_certs'"
 echo "/usr/local/openvpn_as/scripts/dbcvt -t config -s sqlite:////usr/local/openvpn_as/etc/db/config.db -d 'mysql://${MYSQL_USER}:${MYSQL_PASS}@${MYSQL_HOST}/as_config'"
+echo "/usr/local/openvpn_as/scripts/dbcvt -t config_local -s sqlite:////usr/local/openvpn_as/etc/db/config_local.db -d 'mysql://${MYSQL_USER}:${MYSQL_PASS}@${MYSQL_HOST}/as_config_local'"
+echo "/usr/local/openvpn_as/scripts/dbcvt -t cluster -s sqlite:////usr/local/openvpn_as/etc/db/cluster.db -d 'mysql://${MYSQL_USER}:${MYSQL_PASS}@${MYSQL_HOST}/as_cluster'"
+echo "/usr/local/openvpn_as/scripts/dbcvt -t notification -s sqlite:////usr/local/openvpn_as/etc/db/notification.db -d 'mysql://${MYSQL_USER}:${MYSQL_PASS}@${MYSQL_HOST}/as_notification'"
 echo "/usr/local/openvpn_as/scripts/dbcvt -t log -s sqlite:////usr/local/openvpn_as/etc/db/log.db -d 'mysql://${MYSQL_USER}:${MYSQL_PASS}@${MYSQL_HOST}/as_log'"
 echo "/usr/local/openvpn_as/scripts/dbcvt -t user_prop -s sqlite:////usr/local/openvpn_as/etc/db/userprop.db -d 'mysql://${MYSQL_USER}:${MYSQL_PASS}@${MYSQL_HOST}/as_userprop'"
