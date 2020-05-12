@@ -30,6 +30,15 @@ user_prop_db=<%= @openvpn_user_prop_db %>
 # configuration DB
 config_db=<%= @openvpn_config_db %>
 
+# configuration DB Local
+config_db_local=sqlite:///~/db/config_local.db
+
+# cluster DB
+cluster_db=sqlite:///~/db/cluster.db
+
+# notification DB
+notification_db=sqlite:///~/db/notification.db
+
 # log DB
 log_db=<%= @openvpn_log_db %>
 
