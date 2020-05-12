@@ -52,7 +52,7 @@ class openvpn_as::config(
     mode    => '0644',
   }
 
-  Script to update config in MySQL:
+  # Script to update config in MySQL:
   file { '/usr/local/openvpn_as/scripts/convert_config.sh':
     content => template('openvpn_as/move-data-to-mysql.sh.erb'),
     owner   => root,
