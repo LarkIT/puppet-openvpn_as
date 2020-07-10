@@ -55,7 +55,7 @@ class openvpn_as::config(
     content => template('openvpn_as/as.conf.erb'),
     owner   => root,
     group   => root,
-    mode    => '0644',
+    mode    => '0600',
   }
 
   # Script to update config in MySQL:
